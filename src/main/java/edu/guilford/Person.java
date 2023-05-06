@@ -9,9 +9,13 @@ public class Person implements Comparable<Person> {
 
     public Person() {
         Random rand = new Random();
-        this.name = "Person " + rand.nextInt(1000);
+        //create an array on names
+        String[] names = {"John", "Mary", "Bob", "Sue", "Joe", "Jane", "Bill", "Anne", "Fred", "Jill"};
+        this.name = names[rand.nextInt(names.length)];
         this.age = rand.nextInt(100);
-        this.address = "Address " + rand.nextInt(1000);
+        //create an array of addresses
+        String[] addresses = {"123 Main St.", "456 Elm St.", "789 Oak St.", "321 Pine St.", "654 Maple St."};
+        this.address = addresses[rand.nextInt(addresses.length)];
     }
 
     // Getters and setters omitted for brevity
