@@ -18,14 +18,34 @@ public class Person implements Comparable<Person> {
         this.address = addresses[rand.nextInt(addresses.length)];
     }
 
-    // Getters and setters omitted for brevity
+    // Getters and setters 
+    public String getName() {
+        return this.name;
+    }
+    
+    public int getAge() {
+        return this.age;
+    }
 
+    public String getAddress() {
+        return this.address;
+    }
+
+
+
+    //add a compare to method to compare the names of the people
     @Override
     public int compareTo(Person other) {
         return this.name.compareTo(other.getName());
     }
 
-    private String getName() {
-        return null;
-    }
+
+    // @Override
+    // public int compareTo(Person other) {
+    //     return this.name.compareTo(other.getName());
+    // }
+
+    // private String getName() {
+    //     return null;
+    // }
 }
